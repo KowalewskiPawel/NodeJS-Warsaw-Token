@@ -19,6 +19,7 @@
     "harhat": "^1.0.1"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^4.4.1",
     "dotenv": "^10.0.0"
   }
 }

@@ -1,4 +1,3 @@
-const { recoverAddress } = require("@ethersproject/transactions");
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
@@ -8,15 +7,16 @@ describe("NodeJSToken", function () {
   const tokenReceiver = "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f";
 
   beforeEach(async () => {
-    const NodeJSToken = await ethers.getContractFactory("NodeJSToken");
+    const NodeJSToken = await ethers.getContractFactory("NodeJSNFT");
     token = await NodeJSToken.deploy();
     await token.deployed();
   });
 
   it("Should return the name of the token", async function () {
-    expect(await token.name()).to.equal("NodeJSToken");
+    expect(await token.author()).to.equal("NodeJSToken");
   });
 
+  /*
   it("Should return the symbol of the token", async function () {
     expect(await token.symbol()).to.equal("NJSW");
   });
@@ -42,4 +42,5 @@ describe("NodeJSToken", function () {
 
     expect(String(addressBalance)).to.equal("200");
   });
+  */
 });
