@@ -57,5 +57,5 @@ Run `npx hardhat test` command.
 
 - [OpenSea](https://testnets.opensea.io) NFT Marketplace
 - [Rarible](https://rinkeby.rarible.com/token/ToknenAddress:ID) Alternative to the OpenSea just input your NFT's address and id in the corresponding places
-- [RinkebyFaucet](https://faucet.rinkeby.io/) You can get some free rinkeby ETH here
+- [RinkebyFaucet](https://faucets.chain.link/rinkeby) You can get some free rinkeby ETH here
 - [Base64Encoder](https://www.utilities-online.info/base64)
