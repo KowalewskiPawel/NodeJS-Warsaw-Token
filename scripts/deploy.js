@@ -6,9 +6,6 @@
 
     console.log("Contract deployed to address:", deployedToken.address);
 
-    const mintToken = await NodeJSToken.mintNodeJSToken();
-    await mintToken.wait();
-
     process.exit(0);
   } catch (error) {
     console.error(error);

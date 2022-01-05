@@ -21,7 +21,7 @@ contract NodeJSNFT is ERC721URIStorage {
 
   function mintNodeJSToken() public {
 
-      require(_tokenIds.current() <= _maxSupply, "All of the tokens minted");
+      require(_tokenIds.current() + 1 <= _maxSupply, "All of the tokens minted");
 
     uint256 newTokenId = _tokenIds.current();
 
