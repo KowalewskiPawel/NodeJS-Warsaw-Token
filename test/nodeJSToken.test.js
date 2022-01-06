@@ -35,7 +35,7 @@ describe("NodeJSToken", function () {
 
     await sendTransaction.wait();
 
-    const addressBalance = await token.balancesOf(tokenReceiver);
+    const addressBalance = await token.balanceOf(tokenReceiver);
 
     // then
 

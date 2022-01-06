@@ -17,7 +17,7 @@ contract NodeJSToken {
         balances[to] += amount;
     }
 
-    function balancesOf(address account) external view returns (uint) {
+    function balanceOf(address account) external view returns (uint) {
         return balances[account];
     }
 }
