@@ -7,13 +7,13 @@ describe("NodeJSToken", function () {
   const tokenReceiver = "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f";
 
   beforeEach(async () => {
-    const NodeJSToken = await ethers.getContractFactory("NodeJSToken");
-    token = await NodeJSToken.deploy();
+    const NodeJSToken = await ethers.getContractFactory("NodeJSTokenERC20");
+    token = await NodeJSToken.deploy("NodeJS Warsaw Token", "NJSW");
     await token.deployed();
   });
 
   it("Should return the name of the token", async function () {
-    expect(await token.name()).to.equal("NodeJSToken");
+    expect(await token.name()).to.equal("NodeJS Warsaw Token");
   });
 
   it("Should return the symbol of the token", async function () {
@@ -23,7 +23,7 @@ describe("NodeJSToken", function () {
   it("Should return a total supply of the token", async function () {
     const totalSupply = await token.totalSupply();
 
-    expect(String(totalSupply)).to.equal("1000");
+    expect(String(totalSupply)).to.equal("100000000000000000000000");
   });
 
   it("Should transfer tokens to the other account", async function () {
@@ -35,7 +35,7 @@ describe("NodeJSToken", function () {
 
     await sendTransaction.wait();
 
-    const addressBalance = await token.balancesOf(tokenReceiver);
+    const addressBalance = await token.balanceOf(tokenReceiver);
 
     // then
 

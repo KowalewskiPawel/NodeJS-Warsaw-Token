@@ -2,7 +2,7 @@ const API_KEY = process.env.API_KEY;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
 
-const contract = require("../artifacts/contracts/NodeJSToken.sol/NodeJSToken.json");
+const contract = require("../artifacts/contracts/NodeJSTokenERC20.sol/NodeJSTokenERC20.json");
 
 const alchemyProvider = new ethers.providers.AlchemyProvider(
   (network = "rinkeby"),
