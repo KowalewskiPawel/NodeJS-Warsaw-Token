@@ -1,12 +1,12 @@
 <br />
-<h1 align="center">Node.js Warsaw Token</h1>
+<h1 align="center">Solidity Token Templates</h1>
 
 ## About The Project
 
-Presentation material of building a simple non-erc20 standard token, and NFT token using Node.js and Solidity. There are two branches for each type of token:
+Presentation material of building a simple non-erc20 standard token, ERC-20, and ERC-721 NFT token using Node.js and Solidity. There are separate branches for each type of token:
 
 - `basic-token` branch with the simplest version of the token
-- `erc-20-token` erc-20 standard token
+- `erc-20-token` ERC-20 standard token
 - `nft-token` nft version according to ERC-721 standard
 
 ### Built With
