@@ -1,8 +1,8 @@
 (async () => {
   try {
-    const NodeJSToken = await ethers.getContractFactory("NodeJSToken");
+    const HelloWorldToken = await ethers.getContractFactory("HelloWorldToken");
 
-    const deployedToken = await NodeJSToken.deploy();
+    const deployedToken = await HelloWorldToken.deploy();
 
     console.log("Contract deployed to address:", deployedToken.address);
 

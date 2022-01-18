@@ -2,7 +2,7 @@ const API_KEY = process.env.API_KEY;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
 
-const contract = require("../artifacts/contracts/NodeJSToken.sol/NodeJSToken.json");
+const contract = require("../artifacts/contracts/HelloWorldToken.sol/HelloWorldToken.json");
 
 const alchemyProvider = new ethers.providers.AlchemyProvider(
   (network = "rinkeby"),
@@ -11,7 +11,7 @@ const alchemyProvider = new ethers.providers.AlchemyProvider(
 
 const signer = new ethers.Wallet(PRIVATE_KEY, alchemyProvider);
 
-const nodeJSTokenContract = new ethers.Contract(
+const helloWorldTokenContract = new ethers.Contract(
   CONTRACT_ADDRESS,
   contract.abi,
   signer
@@ -23,9 +23,9 @@ const nodeJSTokenContract = new ethers.Contract(
     process.stdout.write(".");
   }, 1000);
 
-  const tokenName = await nodeJSTokenContract.name();
-  const tokenSymbol = await nodeJSTokenContract.symbol();
-  const tokenSupply = await nodeJSTokenContract.totalSupply();
+  const tokenName = await helloWorldTokenContract.name();
+  const tokenSymbol = await helloWorldTokenContract.symbol();
+  const tokenSupply = await helloWorldTokenContract.totalSupply();
 
   clearInterval(dotsIncrement);
   process.stdout.write("\n");
