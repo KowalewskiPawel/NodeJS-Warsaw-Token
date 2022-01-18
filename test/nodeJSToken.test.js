@@ -1,23 +1,23 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe("NodeJSToken", function () {
+describe("HelloWorldToken", function () {
   let token;
 
   const tokenReceiver = "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f";
 
   beforeEach(async () => {
-    const NodeJSToken = await ethers.getContractFactory("NodeJSToken");
+    const NodeJSToken = await ethers.getContractFactory("HelloWorldToken");
     token = await NodeJSToken.deploy();
     await token.deployed();
   });
 
   it("Should return the name of the token", async function () {
-    expect(await token.name()).to.equal("NodeJSToken");
+    expect(await token.name()).to.equal("HelloWorldToken");
   });
 
   it("Should return the symbol of the token", async function () {
-    expect(await token.symbol()).to.equal("NJSW");
+    expect(await token.symbol()).to.equal("HWT");
   });
 
   it("Should return a total supply of the token", async function () {
