@@ -1,9 +1,9 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
-contract NodeJSToken {
-    string public name = "NodeJSToken";
-    string public symbol = "NJSW";
+contract HelloWorldToken {
+    string public name = "HelloWorldToken";
+    string public symbol = "HWT";
     uint public totalSupply = 1000;
     mapping(address => uint) balances;
 
